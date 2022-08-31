@@ -59,8 +59,8 @@ def getController(DIDDoc): # return controller string or set
 def getContext(DIDDoc): # return context string or set
     return DIDDoc.get("@context")
 
-def getProperty(DIDDoc,string): # arg string is the name of the Property, return  Property string or set
-    return DIDDoc.get(string)
+def getProperty(DIDDoc,propertyName): # arg propertyName is the name of the Property, return  Property string or set
+    return DIDDoc.get(propertyName)
 
 # for VerificationMethod Property:
 def getVerificationMethodDid(DIDDoc): # return did set,error return None
