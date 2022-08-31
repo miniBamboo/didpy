@@ -1,1 +1,14 @@
-#test
+import did
+DID,error = did.Parse("did:example:123456/a/b/c?aa=1#key-1")
+print(DID)
+print("error:",error)
+DID,error = did.Parse("did:example")
+print(DID)
+print("error:",error)
+DID,error = did.Parse("")
+print(DID)
+print("error:",error)
+ID=did.ParseID("did:example:123456:654321/a/b/c?aa=1#key-1")
+print(ID)
+Params=did.ParseParams("did:example:123456;abc;efg/a/b/c?aa=1#key-1")
+print(Params)
